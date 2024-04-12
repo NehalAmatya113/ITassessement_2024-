@@ -1,0 +1,660 @@
+
+
+css
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+.merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Header */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(watch.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+}
+
+.nav_links {
+    position: fixed;
+    background-color: #333;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    right: -250px; /* Initially hide the sidebar */
+    transition: right 0.5s ease;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_links ul{
+    list-style: none;
+    padding: 0;
+}
+
+.nav_links ul li {
+    padding: 20px;
+    margin: 0 10px;
+}
+
+.nav_links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav_links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: green;
+    display: block;
+    margin: auto;
+}
+
+.nav_links ul li:hover::after {
+    width: 100%;
+}
+.nav-links li a:hover {
+    color: #ff4a4a;
+}
+.nav-links li a {
+    color: #333;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+.text-box {
+   
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 4.5rem; /* Adjusted font size */
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 1.25rem; /* Adjusted font size */
+}
+
+.learn-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.learn-btn:hover {
+    border: 1px solid green;
+    background: green;
+    transition: 1s;
+}
+
+.fa {
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    } 
+    .nav_links ul {
+        padding: 30px;
+    }
+    .nav_links ul li{
+    display: block;    
+    }
+    .nav_links{
+        position: fixed;
+        background: green;
+        height: 100vh;
+        width: 200px;
+        top:0;
+        right: -200px; /* Corrected value */
+        text-align: left;
+        z-index: 2;
+    }
+    nav .fa {
+        display: block; /* Corrected selector */
+        color: green;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+
+/* Watches Available */
+.watches {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.watches h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.watches p {
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.watches .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10%;
+}
+
+.watch-col {
+    flex-basis: calc(33.33% - 20px);
+    background: rgb(24, 143, 24);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.watch-col h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.watch-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.watch-col p {
+    color: white;
+}
+
+/* New Watches */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.watches, .new {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.watches h2, .new h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.watches p, .new p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.watch-col, .new-col {
+    flex: 1;
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.watch-col:hover, .new-col:hover {
+    transform: translateY(-5px);
+}
+
+.watch-col h3, .new-col h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.watch-col ul, .new-col ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.watch-col ul li, .new-col ul li {
+    font-size: 1.1rem;
+    color:green;
+    margin-bottom: 10px;
+}
+
+.new-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: green;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.new-col:hover .layer {
+    opacity: 1;
+    color: green;
+}
+
+
+/* Care and Services */
+.care {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.service-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.service {
+    width: calc(33.33% - 20px); /* Adjust as needed */
+    margin: 0 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.care-col img {
+    width: 100%;
+    border-radius: 10px;
+    
+}
+.service img {
+    max-width: 100%;
+    max-height: 150px; /* Adjust the maximum height as needed */
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+/* About */
+.about {
+    background-color: black;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-col {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .about-col {
+        max-width: 100%;
+    }
+}
+
+
+/* Contact */
+.cta {
+        margin: 100px auto;
+        width: 80%;
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('contact.jpeg');
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        text-align: center;
+        padding: 100px;
+    }
+    
+
+.cta h1 {
+    color: white;
+    margin-bottom: 40px;
+}
+
+@media(max-width: 700px){
+    .cta h1 {
+        font-size: 24px;
+    }
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    text-align: center;
+}
+.make {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.make .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.make-col {
+    flex: 1;
+    max-width: 50%;
+}
+
+.make-col h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.make-col p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.make-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.sub-header {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(17, 120, 5), rgb(12, 81, 4));
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+/* Add custom styles here if needed */
+
+.new .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.new h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.new p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.new .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-right: -20px;
+}
+
+.new .new-col {
+    width: calc(33.33% - 20px); /* 6 columns with a little space between */
+    margin-bottom: 40px;
+    position: relative;
+    margin-right: 20px;
+}
+
+.new .new-col img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+
+
+.new .new-col .layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.new .new-col .layer h3 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+.footer{
+    color: #000000;
+}
+.new .new-col {
+    width: calc(33.33% - 20px); /* Adjusted width for 3 columns */
+    margin-bottom: 40px;
+    margin-right: 20px; /* Added margin between columns */
+    position: relative;
+}
+
+.new .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align columns to the start */
+    margin-right: -20px; /* Adjusted negative margin to counteract margin-right on columns */
+}
+
+.new .row::after {
+    content: "";
+    flex: auto; /* Fill remaining space */
+}
+
+
+
+/*----------Contact Us-----*/
+.location {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe {
+    width: 100%;
+}
+.contact-us {
+    width: 100%;
+    padding: 20px; /* Added padding to push the section down */
+}
+
+.row {
+    display: flex;
+    flex-direction: column; /* Arrange columns vertically */
+    align-items: flex-start; /* Align columns to the left */
+}
+
+.contact-col {
+    width: 100%; /* Ensure each column takes up full width */
+    margin-bottom: 30px;
+    background-color: #f9f9f9; /* Added background color */
+    padding: 20px 10px; /* Added padding for content spacing */
+    border-radius: 8px;
+    color: black;
+}
+
+.contact-col h5,
+.contact-col p,
+.contact-col a {
+    margin: 0; /* Remove default margins */
+    color: black;
+    margin-bottom: 10px; /* Add space between elements */
+    
+}
+
+.icon-link {
+    margin-right: 10px; /* Add margin between icon and text */
+}
+
+
+
+
+.contact-col form input,
+.contact-col form textarea,
+.contact-col form button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contact-col form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contact-col form button:hover {
+    background-color: #0056b3;
+}
+.contact-col-form {
+    flex-basis: 10%; /* Adjusted column width */
+    justify-content: flex-end; /* Align items to the right */
+    margin: 20px;
+}
+.contact-col > div {
+    display: flex;
+    flex-direction: column;
+}
+.row2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column; /* Arrange columns vertically */
+        align-items: flex-start
+}
+/*-----info----*/
+.Info {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.Info-col {
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background-color: green; /* Improved readability */
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    padding: 20px; /* Improved padding for better spacing */
+}
+
+.Info-col img {
+    height: 100px;
+    margin-right: 20px; /* Adjusted margin for better spacing */
+    border-radius: 50%;
+}
+
+.Info-col h3 {
+    margin: 0; /* Removed top margin and adjusted spacing */
+    text-align: left;
+    color: white; /* Improved readability */
+    font-size: 1.5rem; /* Improved font size for better readability */
+}
+
+.Info-col p {
+    margin: 5px 0; /* Added margin for better spacing */
+    color: white; /* Improved readability */
+    font-size: 1rem; /* Improved font size for better readability */
+}
+.Info-col h1{
+   color: black;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WatchX - Excellence in Watchmaking</title>
+    <link rel="stylesheet" href="assign.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Add custom styles here if needed */
+    </style>
+</head>
+<body>
+    <header class="sub-header">
+        <nav class="navbar">
+            <a href="assign.html" class="logo-link"><img src="images/logo2-01.svg" class="logo" alt="WatchX Logo"></a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">HOME</a></li>
+                    <li><a href="Watches.html">WATCHES</a></li>
+                    <li><a href="Watchmaking.html">Watchmaking</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="WatchX.html">WatchX</a></li>
+            </ul>
+        </nav>
+      
+        </nav>
+        <h1>Contact Us</h1>
+    </section>
+    <!----contact us-->
+    <section class="location">
+        <!-- Ensure that the URL inside the src attribute is correct and points to a valid Google Maps location -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28257.752821731094!2d85.2998001395508!3d27.710520600000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19016142619d%3A0x7010b1f4a3785d45!2sRegency%20Watch!5e0!3m2!1sen!2snp!4v1712913540275!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section class="contact-us">
+        <div class="row2">
+            <div class="contact-col">
+                <div>
+                    <h5>XYZ Road, ABC Building</h5>
+                    <p>Kathmandu, Nepal</p>
+                    <a href="#" class="icon-link"><i class="fas fa-home"></i></a>
+                </div>
+            </div> 
+            <div class="contact-col">
+                <div>
+                    <h5>+13736748732</h5>
+                    <p>Sunday to Friday, 10AM to 8PM</p>
+                    <a href="#" class="icon-link"><i class="fas fa-phone"></i></a>
+                </div> 
+            </div>
+            <div class="contact-col">
+                <h5>Email</h5>
+                <p>anehal23@tbc.edu.np</p>
+                <p>Email us for your query</p>
+                <a href="#" class="icon-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="contact-col  contact-col-form">
+                <form action="FormHandler.php" method="post">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="email"name="email" placeholder="Enter email address" required>
+                    <input type="text" name="subject" placeholder="Enter your subject" required>
+                    <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+ 
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+        
+    
+    
+   
+<br>
+    <footer class="footer">
+        <div class="container">
+            <h4>Know more about us</h4>
+            <p>WatchX has revolutionized the watchmaking industry with its relentless pursuit of excellence.</p>
+            <div class="social-icons">
+                <a href="#" class="icon-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="icon-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

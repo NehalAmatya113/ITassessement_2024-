@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--First commit-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watches</title>
+    <link rel="stylesheet" href="assign.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="assign.html"><img src="images/logo2-01.svg" class="logo" alt="Logo"></a>
+            <div class="nav_links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="Watches.html">WATCHES</a></li>
+                    <li><a href="Watchmaking.html">Watchmaking</a></li>
+                    <li><a href="Contact.html">Contac Us</a></li>
+                    <li><a href="WatchX.html">WatchX</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <p>When the iconic meets the unexpected</p>
+            <h1>New Watches 2024</h1>
+            <p>Unveiling on 9 April 2024</p>
+            <br>
+            <a href="#" class="learn-btn">Learn more ></a>
+        </div>
+    </section>
+    
+    <section class="watches">
+        <div class="container">
+            <h2>Discover Watch X</h2>
+            <p>Explore our services, latest collections, and more.</p>
+            <div class="row">
+                <div class="watch-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Find your watch</li>
+                        <li>Configure your watch</li>
+                        <li>Men's Watch</li>
+                        <li>Women's Watch</li>
+                    </ul>
+                </div>
+                <div class="watch-col">
+                    <h3>Buy a Watch</h3>
+                    <ul>
+                        <li>Store locator</li>
+                        <li>Buying guide</li>
+                    </ul>
+                </div>
+                <div class="watch-col">
+                    <h3>Care and Servicing</h3>
+                    <ul>
+                        <li>Service Center locator</li>
+                        <li>Watch care and service</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="new">
+        <div class="container">
+            <h2>New Watches</h2>
+            <p>Discover our latest 2024 collections.</p>
+            <div class="row">
+                <div class="new-col">
+                    <img src="images/watch3.jpg" alt="Watch 3">
+                    <div class="layer">
+                        <h3>Daytona</h3>
+                    </div>
+                </div>
+                <div class="new-col">
+                    <img src="images/watch.jpg" alt="Watch">
+                    <div class="layer">
+                        <h3>Deep Sea</h3>
+                    </div>
+                </div>
+                <div class="new-col">
+                    <img src="images/watch6.jpg" alt="Watch 6">
+                    <div class="layer">
+                        <h3>Dial</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section class="care">
+        <h1>Our Services</h1>
+        <p>Our watches are designed and built to last.</p>
+    
+        <div class="service-row">
+            <div class="service">
+                <img src="images/repair.jpg" alt="Quality and reliability">
+                <h3>Quality and Reliability</h3>
+                <p>At WatchX, we ensure that your watch performs as well throughout your life as on the day you bought it.</p>
+            </div>
+            <div class="service">
+                <img src="images/repair2.jpg" alt="Servicing your watch">
+                <h3>Servicing Your Watch</h3>
+                <p>WatchX watches are exceptional, designed to function perfectly today, tomorrow, and into the future.</p>
+            </div>
+            <div class="service">
+                <img src="images/repair3.jpg" alt="Service center locator">
+                <h3>Service Center Locator</h3>
+                <p>Every official WatchX store is authorized to receive your watch for servicing.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+   
+    <!-----Contact Us---->
+    <section class="cta">
+        <div class="container">
+            <h2>Get Your WatchX</h2>
+            <p>Explore our exquisite timepieces and elevate your style.</p>
+            <a href="#" class="cta-btn">Contact Us</a>
+        </div>
+    </section>
+    
+
+    <!----Footer------>
+    <section class="footer">
+        <h4>Know about us more</h4>
+        <p>WatchX innovations have indelibly marked the history of global watchmaking and bear witness to its founderunending quest for excellence.</p>
+        <div class="icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+        
+    </section>
+    <!-- Javascript for Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-250px";
+        }
+    </script>
+</body>
+</html>
